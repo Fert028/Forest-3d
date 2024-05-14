@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "raleway_c", sans-serif;
+  font-size: calc((1vw + 1vh) * 0.8);
+  line-height: 1.75;
+  font-weight: 300;
+  height: 4000px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+
+.gallery {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.75s cubic-bezier(0.075, 0.5, 0, 1), opacity 0.75s ease;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+p {
+  letter-spacing: 0.1em;
+}
+
+.frame h2 {
+  text-align: center;
+  font-size: calc((1vw + 1vh) * 3.3);
+}
+
+.frame-media {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: calc((1vw + 1vh) * 26);
+  height: calc((1vw + 1vh) * 36);
+}
+
+.frame-media_left {
+  right: calc(13 * (1vw + 1vh) + 30px);
+}
+
+.frame-media_right {
+  left: calc(13 * (1vw + 1vh) + 30px);
+}
+
+.frame-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.frame-media_desktop {
+  width: calc((1vw + 1vh) * 36 / 1.25);
+  height: calc((1vw + 1vh) * 26 / 1.5);
+}
+
+.text-right > * {
+  max-width: 60%;
+  position: relative;
+  left: 18vw;
+}
+
+.text-left > * {
+  max-width: 60%;
+  position: relative;
+  right: 18vw;
+}
+
+.frame h3 {
+  font-size: calc((1vw + 1vh) * 3);
+}
+
+.frame p {
+  max-width: 30vw;
+  margin-top: 3vh;
+}
+
+.frame-media_last {
+  width: calc((1vw + 1vh) * 36 * 1.25);
+  height: calc((1vw + 1vh) * 26);
+}
+
+.fert {
+  text-transform: none;
+  font-size: calc((1vw + 1vh) * 0.8);
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: calc(1vw + 1vh);
+}/*# sourceMappingURL=main.css.map */

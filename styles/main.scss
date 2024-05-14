@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$index: calc(1vw + 1vh);
+$gutter: 30px;
+$side-small: 26;
+$side-big: 36;
+$depth: 4000px;
+$transition: 0.75s cubic-bezier(.075, .5, 0, 1);
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'raleway_c', sans-serif;
+    font-size: calc($index * .8);
+    line-height: 1.75;
+    font-weight: 300;
+    height: $depth;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1500px;
+}
+
+.gallery {
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition, opacity 0.75s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+p {
+    letter-spacing: 0.1em;
+}
+
+.frame h2 {
+    text-align: center;
+    font-size: calc($index * 3.3);
+}
+
+.frame-media {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: calc($index * $side-small);
+    height: calc($index * $side-big);
+}
+
+.frame-media_left {
+    right: calc($side-small / 2 * $index + $gutter);
+}
+
+.frame-media_right {
+    left: calc($side-small / 2 * $index + $gutter);
+}
+
+.frame-bg {
+    background-color: rgba($color: #000000, $alpha: 0.8);
+}
+
+.frame-media_desktop {
+    width: calc(($index * $side-big) / 1.25);
+    height: calc(($index * $side-small) / 1.5);
+}
+
+.text-right > * {
+    max-width: 60%;
+	position: relative;
+    left: 18vw;
+}
+
+.text-left > * {
+    max-width: 60%;
+	position: relative;
+	right: 18vw;
+}
+
+.frame h3 {
+	font-size: calc($index * 3);
+}
+
+.frame p {
+	max-width: 30vw;
+	margin-top: 3vh;
+}
+
+.frame-media_last {
+    width: calc(($index * $side-big) * 1.25);
+    height: calc(($index * $side-small));
+}
+
+.fert {
+    text-transform: none;
+    font-size: calc($index * .8);
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: $index;
+}
